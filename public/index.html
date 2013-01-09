@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>cyOverflow</title>
+    <link type="text/css" rel="stylesheet" href="/assets/application.css">
+    <script type="text/javascript" src="vendor/underscore-min.js"></script>
+    <script type="text/javascript" src="vendor/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="vendor/backbone.js"></script>
+	<script type="text/javascript" src="vendor/backbone.localstorage.js"></script>
+    <script type="text/javascript" src="scripts/namespaces.js"></script>
+
+  
+</head>
+<body>
+  <header>
+     <hgroup>
+       <h1>cyOverflow</h1>
+     </hgroup>
+	</header>
+	<div class="content">
+    <section id="userInput">
+	        <div id="loginView">
+	            <label for="userName" id="logInPrompt">Your name:</label>
+	            <input id="userName" type="text"/>
+	            <a id="logIn" class="button">That's me!</a>
+	        </div>
+	        <div id="newQuestionView" class="hidden">
+	            <label for="newQuestion" id="questionPrompt"><span id="asker">Adventurer</span> wants to know...</label>
+	            <textarea cols=20 rows=2 id="newQuestion" name="newQuestion"></textarea>
+	            <a id="addItem" class="button">Ask now!</a>
+	        </div>
+	    </section>
+		<ul id="questions"></ul>
+		<script type="text/template" id="question-template">
+			<div class="voteStatus">
+			  <a class="vote voteup"></a>
+			  <div class="votecount"><%= tally %></div>
+			  <a class="vote votedown"></a>
+			</div>
+			<div class="questionText">
+			  <p><%- text %></p>
+			  <div class="questionAuthor">From: <%- userName %></div>
+			</div>
+		</script>
+	</div>
+
+  <script type="text/javascript" src="scripts/app.js"></script>
+  <script type="text/javascript" src="scripts/models/user.js"></script>
+  <script type="text/javascript" src="scripts/models/question.js"></script>
+  <script type="text/javascript" src="scripts/collections/questions.js"></script>
+  <script type="text/javascript" src="scripts/views/login.js"></script>
+  <script type="text/javascript" src="scripts/views/new_question.js"></script>
+  <script type="text/javascript" src="scripts/views/questions.js"></script>
+  <script type="text/javascript" src="scripts/views/question.js"></script>
+  <script src="http://js.pusher.com/1.12/pusher.min.js"></script>
+  <script type="text/javascript" src="/assets/application.js"></script>
+</body>
+</html>
