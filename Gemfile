@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.1'
+gem 'rails', '3.2.8'
  
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/tmdues/CYOA.git'
@@ -14,9 +14,6 @@ group :production do
 end
  
 gem 'pusher'
-
-gem 'sqlite3'
-
 
 # Gems used only for assets and not required
 # in production environments by default.
