@@ -1,10 +1,19 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.1'
-gem 'pusher'
-
+ 
 # Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+# gem 'rails', :git => 'git://github.com/tmdues/CYOA.git'
+ 
+group :development do
+  gem 'sqlite3'
+end
+ 
+group :production do
+  gem 'pg'
+end
+ 
+gem 'pusher'
 
 gem 'sqlite3'
 
